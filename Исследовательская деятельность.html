@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="CSS.css"/>
+    <title> Путь по достопримечательностям Тюмени </title>
+    <style>
+      * {box-sizing: border-box}
+      
+      body {
+        
+      font-family: Verdana, sans-serif; 
+      margin:0
+      }
+      .mySlides {display: none}
+      img {vertical-align: middle;}
+      .slideshow-container {
+      max-width: 1800px;
+      position: relative;
+      margin: auto;
+      }
+     
+      .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      }
+      
+      .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+      }
+      
+      .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      }
+     
+      .text {
+      color: #ffffff;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      }
+      
+      .numbertext {
+      color: #ffffff;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+      }
+      .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      }
+      .active, .dot:hover {
+      background-color: #111111;
+      }
+      .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
+      @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
+      
+      @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+      }
+    </style>
+  </head>
+  <body>
+    <p><font size="6" color="#ffffff" face="serif"><center>Путешествие по достопримечательностям Тюмени</center></font></p>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 7</div>
+        <img src="http://izosimov72.ru/wp-content/uploads/2021/11/20211107_1336967_16x9_starry.jpg" style="width:100%">
+        <div class="text">Набережная</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 7</div>
+        <img src="https://s3.sravni.ru/cms/Default/KnowledgeBaseArticle/1/tyum1.jpeg" style="width:100%">
+        <div class="text">Мост вюблённых</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 7</div>
+        <img src="https://i9.photo.2gis.com/images/geo/13/1829587361179859_a21d.jpg" style="width:100%">
+        <div class="text">Площадь Борцов Революции</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 7</div>
+        <img src="https://nashural.ru/assets/uploads/td14.jpg" style="width:100%">
+        <div class="text">Вечный огонь</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 7</div>
+        <img src="https://top7travel.ru/wp-content/uploads/2022/11/9s6df76sd78f6s87df.jpg" style="width:100%">
+        <div class="text">Сквер сибирских кошек</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 7</div>
+        <img src="https://fs.tonkosti.ru/3s/ib/3sibzzhcwickoo0kskw8sk08k.jpg" style="width:100%">
+        <div class="text">Цветной бульвар</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">7 / 7</div>
+        <img src="https://afisha-tyumen.ru/media/author/1829587361856513_3dc4.jpg" style="width:100%">
+        <div class="text">Тюменский государственный цирк</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span> 
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"; 
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1} 
+        slides[slideIndex-1].style.display = "block"; 
+        setTimeout(showSlides, 3500); 
+      
+      }
+      
+
+    </script>
+    <p><font size="4" color="#ffffff" face="serif">Это мой проект по элективному курсу проектной деятельности. Хочу представить сайт по достопримечательностям Тюмени.</font> "</p>
+    <p><font size="4" color="#ffffff" face="serif">Данный проект я выбрал для того, чтобы лучше узнать свой город. Раннее у меня уже был опыт с сайтами, но я хочу продолжить этим заниматься.</font></p>
+    <p><font size="4" color="#ffffff" face="serif">Сайт (от англ. Site – место, позиция) – совокупность страниц, объединённых одной общей темой, дизайном, имеющих взаимосвязанную систему ссылок, расположенных в сети Интернет.</font><
+      <p><font size="4" color="#ffffff" face="serif">Каждый сайт создаётся с какой-то определённой целью. Прежде всего, они нужны для передачи определённой информации пользователю сети. Назначение и внешний облик сайтов поражает своим разнообразием.</font></p>
+      <p><font size="4" color="#ffffff" face="serif">Существует много бесплатных конструкторов для создания сайта, такие как Tilda или Figma, которые сильно упрощают работу над сайтом.
+        Я же создал сайт с помощью VS Code и языков HTML, CSS и Java.
+      </font></p>
+    <center><button class="image-button"></button></center>
+    <p><font size="6" color="#ffffff" face="serif"><center>Где можно прогуляться пешком?</center></font></p>
+    <div>
+      <center>
+        <img src="https://sun9-37.userapi.com/impg/ImUtjXUYFrVWtxgapBa_jDRdof54qbrBM4dXZw/DJ0xAiS0KQc.jpg?size=900x595&quality=95&sign=bbd0f39574c3749749e17095e05e0edc&c_uniq_tag=EdRFIom9t9p-2ULk2Jm8uuuUE0khvEUVkIHc4GrU_2s&type=album"width="1500" alt border="10" style="block; width; 230px">
+      </center>
+    </div>
+    <div>
+      <center>
+        <img src="https://mtdata.ru/u22/photo6A21/20128158120-0/original.jpg" width="1500" alt border="10" style="block; width; 230px">
+      </center>
+    </div>
+    <div>
+      <center>
+        <img src="https://tmn.sm.news/wp-content/uploads/2023/10/20/aa14e2a0e43b799d-1008x675.jpg" width="1500" alt border="10" style="block; width; 230px">
+      </center>
+    </div>
+    <div>
+      <center>
+        <img src="" width="1500" alt border="10" style="block; width; 230px">
+      </center>
+    </div>
+    <p><font size="6" color="#ffffff" face="serif"><center>На самокате и велосипеде?</center></font></p>
+    <center>
+      <img src="https://tripplanet.ru/wp-content/uploads/europe/russia/tyumen/central-square-tyumen.jpg" width="1500" alt border="10" style="block; width; 230px">
+    </center>
+  </div>
+  <div>
+  <center>
+    <img src="https://must-see.top/wp-content/uploads/2019/03/pamyatnik-bortsam-revolyutsii--768x510.jpg" width="1500" alt border="10" style="block; width; 230px">
+  </center>
+  </div>
+  <div>
+    <center>
+      <img src="https://avatars.dzeninfra.ru/get-zen_doc/3373796/pub_63888a06a537a06b9fc377e3_63888e0881fe07646ac34a2e/scale_1200" width="1500" alt border="10" style="block; width; 230px">
+    </center>
+    </div>
+  <div>
+    <div id="scroll-top">
+      <button><span data-hover="Наверх"><i class="fa fa-arrow-up"></i></span></button>
+    </div>
+
+      <div class="logo">Logo</div>
+      <ul>
+        <li><a href="Исследовательская деятельность  .html"></a>Home</li>
+        <li><a href="Исследовательская деятельность 2.html"></a></li>
+      </ul>
+    </nav>
+  </body>
+  <script src="JAVA.js"></script>
+</html>

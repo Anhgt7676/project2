@@ -1,0 +1,113 @@
+body, html{
+  background-color: black;
+  max-width: 7000px;
+  padding-top: 40px;
+  
+}
+.image-button {
+  width: 200px;
+  height: 200px;
+  border: none;
+  background-image: url(https://sneg.top/uploads/posts/2023-04/1681066608_sneg-top-p-chelovek-idet-kartinka-krasivo-1.jpg);
+  background-size: cover;
+  border-radius: 15%;
+}
+.image-button:hover {
+  opacity: 0.8;
+}
+
+.image-button:active {
+  transform: scale(0.95);
+}
+
+
+.image-button2 {
+  width: 200px;
+  height: 200px;
+  border: none;
+  background-image: url(https://avatars.dzeninfra.ru/get-zen_doc/169683/pub_5ea37a3707078c388c05b7fc_5ea37a4bb795a2687b1e85ab/scale_1200);
+  background-size: cover;
+  border-radius: 15%;
+}
+.image-button:hover {
+  opacity: 0.8;
+}
+
+.image-button:active {
+  transform: scale(0.95);
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  background: #000000;
+  font-family: Roboto;
+}
+
+.content {
+  height: 400px;
+  line-height: 1.5;
+  width: 90%;
+  margin: 24px auto;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#scroll-top {
+  position: fixed;
+  bottom: 48px;
+  right: 48px;
+}
+
+#scroll-top button {
+  position: relative;
+  overflow: hidden;
+  height: 48px;
+  width: 48px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  background: #ff0000;
+  transition: width 0.5s;
+  border-radius: 100px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#scroll-top button span {
+  display: inline-block;
+  transition: opacity 0.3s ease 0s, transform 0.5s ease 0s;
+  line-height: 48px;
+  font-size: 20px;
+  width: 100%;
+}
+
+#scroll-top button span::before {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 200%;
+  opacity: 0;
+  content: attr(data-hover);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+#scroll-top:hover button {
+  width: 120px;
+  background: #9b59b6;
+}
+
+#scroll-top:hover button span {
+  -webkit-transform: translateY(-200%);
+  -moz-transform: translateY(-200%);
+  transform: translateY(-200%);
+}
+
+#scroll-top:hover button span:before {
+  opacity: 1;
+}
+
